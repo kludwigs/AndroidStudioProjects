@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TipCalcApp</string>
+    <string name="bill_label">Enter Charge Amount Here</string>
+    <string name="tip_amount_label_ten_percent">10%</string>
+    <string name="tip_amount_label_twenty_percent">20%</string>
+    <string name="seekBar_ValueIndicator">XX</string>
+    <string name="custom_header">Custom Tip Amount</string>
+</resources>
