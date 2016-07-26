@@ -158,7 +158,7 @@ public class TipCalculator extends AppCompatActivity {
     {
         double tmpChargeAmount = charge_amount;
 
-        double tmptipAmount10 = tmpChargeAmount*.15;
+        double tmptipAmount10 = tmpChargeAmount*.10;
         double tmptipAmount20 = tmpChargeAmount*.20;
 
         double tmptotalAmount10 = tmpChargeAmount + tmptipAmount10;
