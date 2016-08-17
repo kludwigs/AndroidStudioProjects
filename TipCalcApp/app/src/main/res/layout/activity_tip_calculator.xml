@@ -15,7 +15,12 @@
         android:layout_height="wrap_content"
         android:text="@string/bill_label"
         android:id="@+id/charge_amount_label"
-        android:layout_marginTop="4dp"/>
+        android:layout_marginTop="4dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
 
 
     <EditText
@@ -55,7 +60,14 @@
         android:id="@+id/tip_amount10EditText"
         android:layout_alignLeft="@+id/tip_amount20EditText"
         android:layout_alignBottom="@+id/percent10TextView"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+
+        />
 
 
     <EditText
@@ -65,7 +77,13 @@
         android:layout_alignBottom="@+id/percent20TextView"
         android:layout_toRightOf="@+id/percent20TextView"
         android:layout_marginLeft="70dp"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:layout_marginTop="30dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -73,7 +91,13 @@
         android:id="@+id/total_amount10EditText"
         android:layout_alignTop="@+id/tip_amount10EditText"
         android:layout_alignLeft="@+id/total_amount20EditText"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
 
 
     <EditText
@@ -84,7 +108,12 @@
         android:layout_toRightOf="@+id/tip_amount20EditText"
         android:layout_alignBottom="@+id/tip_amount20EditText"
         android:layout_marginLeft="60dp"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
 
     <SeekBar
         android:layout_width="180dp"
@@ -103,7 +132,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -113,7 +146,13 @@
         android:layout_alignBottom="@+id/custom_tip_rateEditText"
         android:layout_marginLeft="70dp"
 
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -122,7 +161,13 @@
         android:layout_alignBottom="@+id/custom_tip_amountEditText"
         android:layout_toRightOf="@+id/custom_tip_amountEditText"
         android:layout_marginLeft="70dp"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -132,7 +177,12 @@
         android:layout_below="@+id/percent20TextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -142,7 +192,12 @@
         android:layout_below="@+id/custom_tip_rateEditText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -150,15 +205,7 @@
         android:layout_below="@+id/Custom_Tip_Amount_Label"
         android:ems="3"
         android:inputType="numberDecimal" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/custom_tiprate_amountEditText"
-        android:layout_toRightOf="@+id/custom_tip_rateEditText"
-        android:layout_alignBottom="@+id/custom_tip_rateEditText"
-        android:layout_marginLeft="70dp"
 
-        android:inputType="numberDecimal" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -166,7 +213,12 @@
         android:layout_toRightOf="@+id/custom_tip_amount_percentageEditText"
         android:layout_alignBottom="@id/custom_tip_amount_percentageEditText"
         android:layout_marginLeft="50dp"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -175,6 +227,11 @@
         android:layout_toRightOf="@+id/custom_tip_amount_editText"
         android:layout_alignBottom="@id/custom_tip_amount_editText"
         android:layout_marginLeft="50dp"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
 
 </RelativeLayout>
