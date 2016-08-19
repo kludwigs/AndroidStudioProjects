@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="@string/bill_label"
         android:id="@+id/charge_amount_label"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="14dp"
         android:clickable="false"
         android:cursorVisible="false"
         android:focusable="false"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/charge_amountEditText"
         android:layout_toRightOf="@+id/charge_amount_label"
-        android:layout_marginLeft="14px"
+        android:layout_marginLeft="25dp"
         android:ems="3"
         android:inputType="numberDecimal" />
 
@@ -40,7 +40,7 @@
         android:layout_alignLeft="@+id/percent10TextView"
         android:layout_alignStart="@+id/percent10TextView"
         android:layout_below="@+id/percent10TextView"
-        android:layout_marginTop="51dp" />
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,8 +48,8 @@
         android:text="@string/tip_amount_label_ten_percent"
         android:id="@+id/percent10TextView"
         android:layout_below="@+id/charge_amountEditText"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginTop="20dp"
+        />
 
 
 
@@ -58,8 +58,10 @@
         android:layout_height="wrap_content"
 
         android:id="@+id/tip_amount10EditText"
-        android:layout_alignLeft="@+id/tip_amount20EditText"
+        android:layout_toRightOf="@+id/percent10TextView"
         android:layout_alignBottom="@+id/percent10TextView"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="-6dp"
         android:inputType="numberDecimal"
 
         android:clickable="false"
@@ -77,6 +79,7 @@
         android:layout_alignBottom="@+id/percent20TextView"
         android:layout_toRightOf="@+id/percent20TextView"
         android:layout_marginLeft="70dp"
+        android:layout_marginBottom="-6dp"
         android:inputType="numberDecimal"
         android:layout_marginTop="30dp"
         android:clickable="false"
@@ -90,9 +93,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/total_amount10EditText"
         android:layout_alignTop="@+id/tip_amount10EditText"
-        android:layout_alignLeft="@+id/total_amount20EditText"
+        android:layout_toRightOf="@+id/tip_amount10EditText"
         android:inputType="numberDecimal"
-
+        android:layout_marginLeft="70dp"
         android:clickable="false"
         android:cursorVisible="false"
         android:focusable="false"
@@ -107,7 +110,7 @@
         android:layout_alignTop="@+id/tip_amount20EditText"
         android:layout_toRightOf="@+id/tip_amount20EditText"
         android:layout_alignBottom="@+id/tip_amount20EditText"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="70dp"
         android:inputType="numberDecimal"
         android:clickable="false"
         android:cursorVisible="false"
@@ -128,15 +131,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/custom_tip_rateEditText"
-        android:layout_below="@+id/tipseekBar"
+        android:layout_below="@+id/CustomHeaderEditText4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
+        android:gravity="right"
+
+        android:layout_marginTop="50dp"
         android:inputType="numberDecimal"
-        android:clickable="false"
-        android:cursorVisible="false"
-        android:focusable="false"
-        android:focusableInTouchMode="false"/>
+        android:ems="3"
+
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -144,7 +148,7 @@
         android:id="@+id/custom_tip_amountEditText"
         android:layout_toRightOf="@+id/custom_tip_rateEditText"
         android:layout_alignBottom="@+id/custom_tip_rateEditText"
-        android:layout_marginLeft="70dp"
+        android:layout_marginLeft="50dp"
 
         android:inputType="numberDecimal"
         android:clickable="false"
@@ -154,13 +158,63 @@
 
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/custompercentlabel"
+        android:layout_toRightOf="@+id/custom_tip_rateEditText"
+        android:layout_alignBottom="@+id/custom_tip_rateEditText"
+        android:paddingBottom="12dp"
+        android:layout_marginLeft="-4dp"
+        android:text="%"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textNoSuggestions"
+        android:textColor="#1a1a1a"
+        android:textSize="16dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/customdollarsignlabel"
+        android:layout_toLeftOf="@+id/charge_amountEditText"
+        android:layout_alignBottom="@+id/charge_amountEditText"
+        android:paddingBottom="12dp"
+        android:layout_marginRight="-30dp"
+        android:text="$"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textNoSuggestions"
+        android:textColor="#1a1a1a"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/customdollarsignlabel2"
+        android:layout_toLeftOf="@+id/custom_tip_amount_editText"
+        android:layout_alignBottom="@+id/custom_tip_amount_editText"
+        android:paddingBottom="12dp"
+        android:layout_marginRight="-13dp"
+        android:text="$"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textNoSuggestions"
+        android:textColor="#1a1a1a"
+        android:textSize="16dp" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/custom_tiprate_totalAmountEditText"
         android:layout_alignBottom="@+id/custom_tip_amountEditText"
         android:layout_toRightOf="@+id/custom_tip_amountEditText"
-        android:layout_marginLeft="70dp"
+        android:layout_marginLeft="50dp"
         android:inputType="numberDecimal"
 
         android:clickable="false"
@@ -174,10 +228,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/CustomHeaderEditText4"
         android:text="Custom % Amount"
-        android:layout_below="@+id/percent20TextView"
+        android:layout_below="@+id/percent10TextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:clickable="false"
         android:cursorVisible="false"
         android:focusable="false"
@@ -203,6 +257,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/custom_tip_amount_editText"
         android:layout_below="@+id/Custom_Tip_Amount_Label"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
         android:ems="3"
         android:inputType="numberDecimal" />
 
@@ -226,7 +282,7 @@
         android:id="@+id/custom_tip_amount_percentageEditText"
         android:layout_toRightOf="@+id/custom_tip_amount_editText"
         android:layout_alignBottom="@id/custom_tip_amount_editText"
-        android:layout_marginLeft="50dp"
+        android:layout_alignLeft="@id/custom_tip_amountEditText"
         android:inputType="numberDecimal"
         android:clickable="false"
         android:cursorVisible="false"

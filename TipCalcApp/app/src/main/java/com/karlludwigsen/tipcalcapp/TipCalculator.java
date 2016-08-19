@@ -13,11 +13,11 @@ public class TipCalculator extends AppCompatActivity {
     private static final String CUSTOM_TIP_RATE = "";
 
     private static final String TIP_AMOUNT10 = "";
-    private static final String TIP_AMOUNT20 = "";
+
     private static final String CUSTOM_TIP_AMOUNT ="";
 
     private static final String TOTAL_AMOUNT10 = "";
-    private static final String TOTAL_AMOUNT20 = "";
+
     private static final String CUSTOM_TOTAL_AMOUNT = "";
 
     private double charge_amount;
@@ -26,18 +26,23 @@ public class TipCalculator extends AppCompatActivity {
     private double customTipAmountPercentage;
 
     private double tipAmount10;
-    private double tipAmount20;
+
     private double customTipRateAmount;
     private double customTipAmount;
 
     private double totalAmount10;
-    private double totalAmount20;
+
     private double customTipRateTotalAmount;
 
+     private static final String TOTAL_AMOUNT20 = "";
+    private static final String TIP_AMOUNT20 = "";
+     private double tipAmount20;
+     private double totalAmount20;
+    EditText seekBarValueIndicatorET;
 
     EditText ChargeAmountET;
 
-    EditText seekBarValueIndicatorET;
+
 
     EditText tipAmount10ET;
     EditText tipAmount20ET;
@@ -95,6 +100,7 @@ public class TipCalculator extends AppCompatActivity {
         // add the charge amount listener
         ChargeAmountET.addTextChangedListener(ChargeAmountListener);
         customTipAmountET.addTextChangedListener(TipAmountListener);
+        customTipRateET.addTextChangedListener(TipRateListener);
 
     }
     protected void onSaveInstanceState(Bundle outState)
@@ -103,10 +109,12 @@ public class TipCalculator extends AppCompatActivity {
         outState.putDouble(CHARGE_AMOUNT, charge_amount);
 
         outState.putDouble(TIP_AMOUNT10, tipAmount10);
+        outState.putDouble(CUSTOM_TIP_RATE, customTipRate);
         outState.putDouble(TIP_AMOUNT20, tipAmount20);
         outState.putDouble(TOTAL_AMOUNT10, totalAmount10);
         outState.putDouble(TOTAL_AMOUNT20, totalAmount20);
     }
+
     private SeekBar.OnSeekBarChangeListener tipseekbarListener = new SeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -117,10 +125,11 @@ public class TipCalculator extends AppCompatActivity {
 
             customTipRate =seekBarValue *0.01;
             try {
-                customTipRateET.setText(String.format("%.02f", seekBarValue) + "%");
+                customTipRateET.setText(String.format("%.02f", seekBarValue));
                 seekBarValueIndicatorET.setText(String.format("%.02f", seekBarValue)+ "%");
             }
             catch(Exception e)
+
             {
 
             }
@@ -191,6 +200,37 @@ public class TipCalculator extends AppCompatActivity {
             }
 
             updateTipAndFinalBill();
+        }
+    };
+
+
+    private TextWatcher TipRateListener = new TextWatcher()
+    {
+        @Override
+        public void afterTextChanged(Editable arg0) {
+            // TODO Auto-generated method stub
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,int arg3)
+        {
+            // TODO Auto-generated method stub
+        }
+        @Override
+        public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3)
+        {
+            if( !(arg0.toString().indexOf("%") >= 0))
+            {
+                try {
+                    customTipRate = Double.parseDouble(arg0.toString());
+                    //customTipRateET.setText(String.format("%.02f", customTipRate )+ "%");
+                    customTipRate /= 100;
+                } catch (NumberFormatException e) {
+                    customTipRate = 0.0;
+                }
+
+                updateTipAndFinalBill();
+            }
         }
     };
 
